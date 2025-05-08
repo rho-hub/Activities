@@ -1,0 +1,25 @@
+.categories {
+    display: flex;
+    padding: 0.5rem 2rem;
+    overflow-x: auto;
+  }
+  
+  .category-btn {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .category-btn:hover {
+    background: #f5f5f5;
+  }
+  
+  .category-btn.active {
+    background: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }

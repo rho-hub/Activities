@@ -1,0 +1,36 @@
+.activity-card {
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .activity-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .activity-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+  }
+  
+  .location, .distance, .date {
+    margin: 3px 0;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .rating {
+    color: #FFA500;
+    font-weight: bold;
+  }
+  
+  /* Differentiate between event and place cards */
+  .activity-card.event {
+    border-left: 4px solid #4285F4;
+  }
+  
+  .activity-card.place {
+    border-left: 4px solid #34A853;
+  }

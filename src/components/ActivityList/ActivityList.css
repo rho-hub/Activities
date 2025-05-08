@@ -1,0 +1,19 @@
+.activity-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-section h3 {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity-section h3::after {
+  content: attr(data-count);
+  font-weight: normal;
+  color: #666;
+}

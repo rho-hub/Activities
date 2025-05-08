@@ -1,0 +1,51 @@
+.map-container {
+    flex: 1;
+    height: 100%;
+    position: relative;
+  }
+  
+  .map-loading, .map-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* Ensure map has dimensions */
+  .gm-style {
+    height: 100%;
+    width: 100%;
+  }
+  .map-wrapper {
+    position: relative;
+    height: 100%;
+  }
+  
+  .map-filters {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    transition: all 0.2s;
+  }
+  
+  .filter-btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }

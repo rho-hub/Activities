@@ -1,0 +1,11 @@
+.search-container {
+    padding: 1rem 2rem;
+  }
+  
+  .search-bar {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    font-size: 1rem;
+  }
