@@ -14,6 +14,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
+    
     const loadData = async () => {
       try {
         const eventsData = await fetchEvents();

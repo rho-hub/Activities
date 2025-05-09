@@ -4,6 +4,18 @@ import { Marker, InfoWindow } from '@react-google-maps/api';
 const MapMarkers = ({ userLocation, events = [] }) => {
   const [selectedMarker, setSelectedMarker] = useState(null);
 
+  // Function to determine marker color based on activity type
+  const getMarkerIcon = (type) => {
+    const colorMap = {
+      music: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
+      sports: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+      art: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+      food: 'http://maps.google.com/mapfiles/ms/icons/purple-dot.png',
+      default: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+    };
+    return colorMap[type] || colorMap.default;
+  };
+
   return (
     <>
       {/* User Location Marker */}
@@ -22,6 +34,9 @@ const MapMarkers = ({ userLocation, events = [] }) => {
           <Marker
             key={`event-${event.id}`}
             position={{ lat: event.latitude, lng: event.longitude }}
+            icon={{
+              url: getMarkerIcon(event.type) // Assign marker color based on type
+            }}
             onClick={() => setSelectedMarker(event)}
           />
         )
